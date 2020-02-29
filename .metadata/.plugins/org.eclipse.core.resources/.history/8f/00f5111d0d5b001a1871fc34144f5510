@@ -1,0 +1,11 @@
+@RestController
+public class WelComeController {
+
+    @GetMapping("/")
+    public String greeting(Authentication authentication) {
+
+        String userName = authentication.getName();
+
+        return "Spring Security In-memory Authentication Example - Welcome " + userName;
+    }
+}
